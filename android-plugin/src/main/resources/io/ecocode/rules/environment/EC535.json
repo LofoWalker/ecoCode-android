@@ -1,0 +1,17 @@
+{
+  "title": "Performance: Use WebP Images in /res/drawable/",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant/Issue",
+    "constantCost": "15min"
+  },
+  "tags": [
+    "performance",
+    "android",
+    "ecocode",
+    "eco-design",
+    "images"
+  ],
+  "defaultSeverity": "Minor"
+}

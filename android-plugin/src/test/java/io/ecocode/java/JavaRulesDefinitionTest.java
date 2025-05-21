@@ -46,7 +46,6 @@ public class JavaRulesDefinitionTest {
     }
 
     private void assertSocialRuleProperties(Repository repository) {
-
         Rule googleTrackerRule = repository.rule("EC532");
         assertThat(googleTrackerRule).isNotNull();
         assertThat(googleTrackerRule.name()).isEqualTo("Privacy: Google Tracker");
@@ -247,6 +246,13 @@ public class JavaRulesDefinitionTest {
         assertThat(highFrameRate.name()).isEqualTo("Sobriety: High Frame Rate");
         assertThat(highFrameRate.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
         assertThat(highFrameRate.type()).isEqualTo(RuleType.CODE_SMELL);
+
+        Rule drawableImageCompressionRule = repository.rule("EC535");
+        assertThat(drawableImageCompressionRule).isNotNull();
+        assertThat(drawableImageCompressionRule.name()).isEqualTo("Performance: Use WebP Images in /res/drawable/");
+        assertThat(drawableImageCompressionRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
+        assertThat(drawableImageCompressionRule.type()).isEqualTo(RuleType.CODE_SMELL);
+
     }
 
     private void assertAllRuleParametersHaveDescription(Repository repository) {

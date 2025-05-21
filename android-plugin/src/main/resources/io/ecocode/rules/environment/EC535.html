@@ -1,0 +1,21 @@
+<img src="http://www.neomades.com/extern/partage/ecoCode/EREL008_1x.png">
+
+<p>
+    Using image formats like <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, or <code>.gif</code> in the <code>/res/drawable/</code> folder instead of <code>.webp</code> leads to larger APK sizes and less efficient compression. WebP format, developed by Google, provides better compression with no visible quality loss and is therefore recommended for Android drawable resources. This rule detects non-WebP image formats in <code>/res/drawable/</code> and encourages conversion to WebP early in development.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+Usage of non-WebP images in drawable folder:
+<pre>
+res/drawable/logo.png
+res/drawable/background.jpg
+res/drawable/icon.gif
+</pre>
+
+<h2>Compliant Code Example</h2>
+Usage of WebP images in drawable folder:
+<pre>
+res/drawable/logo.webp
+res/drawable/background.webp
+res/drawable/icon.webp
+</pre>
